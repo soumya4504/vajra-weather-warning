@@ -2,6 +2,8 @@
 
 > **Vajra (वज्र)** is an advanced AI-powered meteorological nowcasting and early warning intelligence platform engineered for rural settlements, agricultural zones, and localized regions prone to convective weather hazards: **Thunderstorms & Severe Lightning**, **Cloudbursts**, and **Flash Floods**.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/soumya4504/vajra-weather-warning)
+
 ---
 
 ## 🌟 Key Features
@@ -107,6 +109,24 @@ Frontend dashboard will be accessible at `http://localhost:5173`.
 
 ---
 
+### 3. Cloud Deployment (1-Click on Render or Railway)
+
+You can deploy the entire unified application (FastAPI + React Frontend) as a single free container:
+
+#### Option A: 1-Click Render Deploy
+Click the button below to launch directly on Render:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/soumya4504/vajra-weather-warning)
+
+#### Option B: Deploy via Docker / Docker Compose
+```bash
+# Build and run with Docker Compose
+docker-compose up --build -d
+```
+Access the unified platform at `http://localhost:8001`.
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Backend**: Python 3.11+, FastAPI, Uvicorn, Pydantic, Scikit-Learn, Joblib, NumPy
@@ -115,6 +135,4 @@ Frontend dashboard will be accessible at `http://localhost:5173`.
 
 ---
 
-## 📄 License
 
-This project is licensed under the MIT License.

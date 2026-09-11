@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (typeof window !== "undefined" && window.location.port === "5173" ? "http://localhost:8001" : "");
+
 function WeatherIntelligence({ weather: weatherProp }) {
   const [weather, setWeather] = useState(weatherProp || null);
   const [loading, setLoading] = useState(!weatherProp);
@@ -13,7 +15,7 @@ function WeatherIntelligence({ weather: weatherProp }) {
       setError("");
 
       const response = await fetch(
-        "http://localhost:8001/api/weather"
+        `${API_BASE_URL}/api/weather`
       );
 
       if (!response.ok) {

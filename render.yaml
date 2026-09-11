@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: vajra-weather-warning
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: main
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_NAME
+        value: vajra-weather-warning
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: OPENWEATHER_API_KEY
+        sync: false
+      - key: WEATHER_API_URL
+        value: https://api.openweathermap.org/data/2.5/weather

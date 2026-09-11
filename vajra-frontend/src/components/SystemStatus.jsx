@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (typeof window !== "undefined" && window.location.port === "5173" ? "http://localhost:8001" : "");
+
 function SystemStatus() {
   const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -13,7 +15,7 @@ function SystemStatus() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:8001/api/system-status"
+        `${API_BASE_URL}/api/system-status`
       );
 
       if (!response.ok) {

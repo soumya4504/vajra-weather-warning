@@ -12,7 +12,7 @@ import L from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 
-const API_BASE_URL = "http://localhost:8001";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (typeof window !== "undefined" && window.location.port === "5173" ? "http://localhost:8001" : "");
 
 // Custom Pulse Pin Icon for Clicked Coordinates
 const createPulseIcon = () => {

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  vajra-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vajra-weather-nowcaster
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
+    environment:
+      - APP_NAME=vajra-weather-warning
+      - APP_ENV=production
+      - PORT=8001
+      - WEATHER_API_URL=https://api.openweathermap.org/data/2.5/weather
+    restart: unless-stopped
