@@ -1,0 +1,11 @@
+xarray
+
+numpy
+
+pandas
+
+metpy
+
+torch
+
+geopandas
